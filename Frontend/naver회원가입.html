@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: #ffffff;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+            font-weight: bold;
+            
+        }
+        .div2{
+            width: 500px;
+            text-align: left;
+
+        }
+        div input{
+            width: 500px;
+            height: 40px;
+            outline:1px solid rgb(209, 203, 203);
+            
+        }
+        .year, .month, .day{
+            width: 155px;
+        }
+        
+        select{
+            width: 500px;
+            height: 45px;
+            
+        }
+        span{
+            color: rgb(202, 190, 190);
+        }
+        img{
+            
+            width: 300px;
+        }
+        .div_img{
+            text-align: center;
+            
+        }
+        .phonenumber, .serial, .button{
+            margin-top: 10px;
+        }
+        .phonenumber{
+            width: 300px;
+        }
+        .button{
+            width: 180px;
+            height: 40px;
+            background-color: #03c75a;
+        }
+        .button_join{
+            width: 500px;
+            height: 40px;
+            background-color: #03c75a;
+        }
+        
+        
+
+       
+    </style>
+</head>
+<body>
+
+    <div>
+    <div class="div2">
+        
+        <div class="div_img"><img src="images/naver.png"></div>
+        <div>
+            아이디<br>
+            <input type="text" placeholder="@naver.com">
+        </div>
+        <div>
+            비밀번호<br>
+            <input type="password">
+        </div>
+        <div>
+            비밀번호 재확인<br>
+            <input type="password">
+        </div>
+        <div>
+            이름<br>
+            <input type="text">
+        </div>
+        <div>
+            생년월일<br>
+            <input type="text" class="year" placeholder="년(4자)">
+            <select class="month">
+                <option>월</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+
+                
+            </select>
+            <input type="text" class="day" placeholder="일">
+        </div>
+        <div>
+            성별<br>
+            <select>
+                <option value="성별"></option>
+                <option value="남"></option>
+                <option value="여"></option>
+            </select>
+        </div>
+        <div>
+            본인 확인 이메일<span>(선택)</span><br>
+            <input type="text" placeholder="선택입력">
+
+        </div>
+        <div class="div_phone">
+            휴대전화<br>
+            <select>
+                <option> 대한민국 +82</option>
+                <option> 미국 +182</option>
+                <option> 가나 +842</option>
+            </select><br>
+            <input type="text" class ="phonenumber" placeholder="전화번호 입력">
+            <button class="button">인증번호 받기</button><br>
+            <input type="text" class="serial"  placeholder="인증번호 입력하세요">
+        </div>
+        <div>
+            <button class="button_join">가입하기</button>
+        </div>
+        
+    </div>
+    </div>
+    
+
+</body>
+</html>

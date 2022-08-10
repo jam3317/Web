@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .visual{
+            height: 200px;
+            background-color: orange;
+            position: relative; /* 부모의 position 값는 relative 해야만 범위안에서 움직임,
+                                     static에서는 적용안됨 */
+        }
+        .visual .item{
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        .visual .item:nth-child(1){
+            background-color: red;
+            /* top, bottom, left, right  position:static(기본값) 에서는 적용이 안됨 
+                position을 변경해야 함 */
+            position: absolute; /* 부모를 기준으로 offset 위치 */
+            bottom: 0px;
+            right: 0px;
+        }
+        .visual .item:nth-child(2){
+            background-color: blue;
+        }
+        .visual .item:nth-child(3){
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="visual">
+        <div class="item">area 1</div>
+        <div class="item">area 2</div>
+        <div class="item">area 3</div>
+
+    </div>
+
+
+
+
+    <div class="notice">
+
+    </div>
+
+</body>
+</html>

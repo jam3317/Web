@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function check(){
+            let frm = document.frm;
+            let userName = frm.userName;
+            let userId = frm.userId;
+            let userPw = frm.userPw;
+            let userPwC = frm.userPwC;
+            let userEmail = frm.userEmail;
+
+            if(userId.value == ""){
+                alert("check ur Id");
+                userId.focus();
+            }
+            else if(userName.value == ""){
+                alert("check ur name");
+                userName.focus();
+            }
+            else{
+                frm.submit();
+                alert("가입완료");
+            }
+        }
+        function setDomain(){
+            let frm = document.frm;
+            let domain = frm.domain;
+            let userEmail = frm.userEmail;
+
+            let domainText = domain.options[domain.selectedIndex].text;
+            let domainValue = domain.options[domain.selectedIndex].value;
+
+            userEmail.value = domainText;
+        }
+
+
+    </script>
+    <style>
+        table{
+            border: 1px solid black;
+            width: 600px;
+            margin: auto;
+            
+        }
+        caption{
+            margin-bottom: 30px;
+        }
+        tr{
+            margin: 0;
+        }
+        th, td{
+            border: 1px solid black;
+            height: 50px;
+            
+        }
+        th {
+            width: 100px;
+        }
+        tr:nth-child(13){
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form name="frm" method="post">
+    <table>
+        <caption>회원가입</caption>
+        <tr>
+            <th>이름</th>
+            <td><input type="text" name="userName"></td>
+        <tr>
+
+        <tr>
+            <th>아이디</th>
+            <td><input type="text" name="userId"></td>
+        <tr>
+
+        <tr>
+            <th>비밀번호</th>
+            <td><input type="password" name="userPw"></td>
+        <tr>
+        
+        <tr>
+            <th>비밀번호확인</th>
+            <td><input type="password" name="userPwC"></td>
+        <tr>
+
+        <tr>
+            <th>이메일</th>
+            <td>
+                <input type="text" >@<input type="text" name="userEmail">
+                <select onchange="setDomain()" name="domain">
+                    <option>선택하세요</option>
+                    <option>google.com</option>
+                    <option>naver.com</option>
+                </select>
+            </td>
+            
+        <tr>
+
+        <tr>
+            <td>
+                <div>
+                    <button type="button" onclick="check()">가입</button>
+                    <button >취소</button>
+                    <a href="시험연습_select.html">rrr</a>
+                </div>
+                
+            </td>
+        <tr>
+
+    </table>
+    </form>
+</body>
+</html>

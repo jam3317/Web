@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    function setDomain(){
+        let frm = document.frm;
+        let domain = frm.domain;
+        let emailDomain = frm.emailDomain;
+
+        let domainText = domain.options[domain.selectedIndex].text;
+        let domainValue = domain.options[domain.selectedIndex].value;
+
+        
+        emailDomain.value = domainText;
+
+
+    }
+
+</script>
+<body>
+    
+    <form name="frm">
+    <input type="text" name="emailDomain">
+    <select onchange="setDomain()" name="domain">
+            <option value="">선택하세요</option>
+            <option value="01">naver.com</option>
+            <option value="02">google.com</option>
+    </select>
+    </form> 
+    
+
+</body>
+</html>
